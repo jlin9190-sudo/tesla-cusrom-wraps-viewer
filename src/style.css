@@ -15,9 +15,9 @@
 }
 
 * { box-sizing: border-box; }
-html, body { margin: 0; height: 100%; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
 
-.app { display: grid; grid-template-columns: 320px 1fr; height: 100vh; }
+.app { display: grid; grid-template-columns: 320px 1fr; height: 100vh; height: 100dvh; }
 
 .sidebar {
   background: var(--panel);
@@ -30,7 +30,7 @@ html, body { margin: 0; height: 100%; }
 }
 
 .brand h1 { font-size: 19px; margin: 0; letter-spacing: 0.02em; }
-.brand .vehicle { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+.brand .vehicle { margin: 4px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; word-break: keep-all; }
 
 section h2 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 10px; font-weight: 600; }
 section h2 .hint { text-transform: none; letter-spacing: 0; font-weight: 400; margin-left: 6px; opacity: 0.8; }
@@ -113,9 +113,38 @@ input[type='color'] { width: 44px; height: 28px; padding: 2px; cursor: pointer; 
 }
 
 .empty, .loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 8vh; pointer-events: none; color: #3b4150; }
-.empty p { font-size: 18px; margin: 0 0 6px; font-weight: 600; }
-.empty small { color: #6b7280; }
+.empty p { font-size: 18px; margin: 0 0 6px; font-weight: 600; text-align: center; }
+.empty small { color: #6b7280; text-align: center; }
+.empty .hint-touch { display: none; }
 .loading { justify-content: center; background: #dfe2e6; font-size: 15px; }
 [hidden] { display: none !important; }
 
 .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #111; color: #fff; padding: 10px 16px; border-radius: 10px; font-size: 13px; z-index: 10; }
+
+@media (pointer: coarse) {
+  .empty .hint-pointer { display: none; }
+  .empty .hint-touch { display: block; }
+}
+
+@media (max-width: 800px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(220px, 42dvh) minmax(0, 1fr);
+  }
+
+  .stage { order: -1; min-height: 0; }
+
+  .sidebar {
+    min-height: 0;
+    border-right: none;
+    border-top: 1px solid var(--line);
+    padding-bottom: calc(28px + env(safe-area-inset-bottom));
+  }
+
+  .empty {
+    justify-content: center;
+    padding: 16px;
+    text-align: center;
+  }
+  .empty p { font-size: 16px; }
+}
