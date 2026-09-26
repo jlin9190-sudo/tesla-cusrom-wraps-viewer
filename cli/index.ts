@@ -167,12 +167,13 @@ async function cmdTemplate(values: Record<string, unknown>): Promise<number> {
     vehicle: vehicle.id,
     templateSize: vehicle.templateSize,
     notes: [
-      'Paint every panel fully opaque; pixels outside panels are never visible.',
-      'Left/right are from the driver seat. In the template, the front of the car is at the top.',
-      'Text and logos are not mirrored per side: check the render to confirm orientation on each panel.',
+      'Paint every panel fully opaque; pixels outside panels are never visible on the car.',
+      'Left/right are from the driver seat. panels.png stores the panel index in the R channel (0 = not on the car).',
+      'orientation.imageRight / imageUp tell which car direction the PNG x axis and up axis point to on that panel; rotate text and logos accordingly (e.g. doors are rotated 90 degrees).',
+      'Verify placement with `render --debug-uv`, which prints panel names onto the car.',
     ],
     files,
-    panels: panels.panels.map(({ index, name, label, description, bbox }) => ({ index, name, label, description, bbox })),
+    panels: panels.panels.map(({ index, name, label, description, bbox, orientation }) => ({ index, name, label, description, bbox, orientation })),
   });
   return 0;
 }
