@@ -196,9 +196,13 @@ async function main(): Promise<number> {
     },
   });
   const [command, ...rest] = positionals;
-  if (values.help || !command) {
+  if (values.help) {
     process.stderr.write(HELP);
-    return values.help ? 0 : 2;
+    return 0;
+  }
+  if (!command) {
+    process.stderr.write(HELP);
+    throw new UsageError('Missing command: check, render or template.');
   }
   switch (command) {
     case 'check':
