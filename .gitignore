@@ -1,0 +1,7 @@
+node_modules/
+dist/
+# Tesla's templates/examples are downloaded on demand (npm run fetch-assets)
+public/custom-wraps/
+out/
+*.log
+.DS_Store

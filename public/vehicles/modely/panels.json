@@ -1,0 +1,383 @@
+{
+  "vehicle": "modely",
+  "width": 1024,
+  "height": 1024,
+  "source": {
+    "repo": "dtschannen/Tesla-Wrap-Studio",
+    "commit": "4063aee8e9e759dbc2e529648a8ab9dd24640960",
+    "files": {
+      "ModelY_High.gltf": "f55fc82129785a011efd0e127822b89d86c316240add75f121d8fe1bd5e54ad6",
+      "ModelY_High0.bin": "db096143e34eb87ad097706bba043a5bb92c11b1a28d0b974e3f769f16269044"
+    }
+  },
+  "panels": [
+    {
+      "index": 1,
+      "name": "door_front_right",
+      "label": "右前门",
+      "description": "Passenger-side front door",
+      "bbox": [
+        821,
+        282,
+        177,
+        263
+      ],
+      "center": [
+        909,
+        408
+      ],
+      "pixels": 41980,
+      "orientation": {
+        "imageRight": "down",
+        "imageUp": "front",
+        "facing": "right",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 2,
+      "name": "mirror_right",
+      "label": "右后视镜",
+      "description": "Passenger-side mirror cap",
+      "bbox": [
+        728,
+        404,
+        78,
+        43
+      ],
+      "center": [
+        764,
+        426
+      ],
+      "pixels": 2645,
+      "orientation": {
+        "imageRight": "right",
+        "imageUp": "front",
+        "facing": "up",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 3,
+      "name": "door_rear_left",
+      "label": "左后门",
+      "description": "Driver-side rear door",
+      "bbox": [
+        28,
+        533,
+        195,
+        235
+      ],
+      "center": [
+        127,
+        640
+      ],
+      "pixels": 35237,
+      "orientation": {
+        "imageRight": "up",
+        "imageUp": "front",
+        "facing": "left",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 4,
+      "name": "door_front_left",
+      "label": "左前门",
+      "description": "Driver-side front door",
+      "bbox": [
+        29,
+        282,
+        177,
+        263
+      ],
+      "center": [
+        116,
+        408
+      ],
+      "pixels": 42021,
+      "orientation": {
+        "imageRight": "up",
+        "imageUp": "front",
+        "facing": "left",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 5,
+      "name": "mirror_left",
+      "label": "左后视镜",
+      "description": "Driver-side mirror cap",
+      "bbox": [
+        222,
+        405,
+        76,
+        42
+      ],
+      "center": [
+        262,
+        426
+      ],
+      "pixels": 2595,
+      "orientation": {
+        "imageRight": "right",
+        "imageUp": "front",
+        "facing": "up",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 6,
+      "name": "door_rear_right",
+      "label": "右后门",
+      "description": "Passenger-side rear door",
+      "bbox": [
+        803,
+        533,
+        196,
+        235
+      ],
+      "center": [
+        898,
+        640
+      ],
+      "pixels": 35232,
+      "orientation": {
+        "imageRight": "down",
+        "imageUp": "front",
+        "facing": "right",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 7,
+      "name": "hood",
+      "label": "引擎盖",
+      "description": "Front hood (frunk lid), seen from above",
+      "bbox": [
+        361,
+        150,
+        301,
+        242
+      ],
+      "center": [
+        511,
+        274
+      ],
+      "pixels": 54608,
+      "orientation": {
+        "imageRight": "right",
+        "imageUp": "front",
+        "facing": "up",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 8,
+      "name": "liftgate",
+      "label": "尾门",
+      "description": "Rear liftgate around the rear window, including the lower tailgate panel",
+      "bbox": [
+        302,
+        632,
+        420,
+        307
+      ],
+      "center": [
+        512,
+        821
+      ],
+      "pixels": 52761,
+      "orientation": {
+        "imageRight": "right",
+        "imageUp": "up",
+        "facing": "rear",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 9,
+      "name": "fender_front_left",
+      "label": "左前翼子板",
+      "description": "Driver-side front fender, from headlight to front door",
+      "bbox": [
+        27,
+        8,
+        228,
+        278
+      ],
+      "center": [
+        173,
+        178
+      ],
+      "pixels": 20938,
+      "orientation": {
+        "imageRight": "right",
+        "imageUp": "front",
+        "facing": "up",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 10,
+      "name": "bumper_front",
+      "label": "前保险杠",
+      "description": "Front bumper / nose fascia",
+      "bbox": [
+        255,
+        8,
+        514,
+        140
+      ],
+      "center": [
+        511,
+        78
+      ],
+      "pixels": 49443,
+      "orientation": {
+        "imageRight": "right",
+        "imageUp": "down",
+        "facing": "front",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 11,
+      "name": "fender_front_right",
+      "label": "右前翼子板",
+      "description": "Passenger-side front fender, from headlight to front door",
+      "bbox": [
+        768,
+        8,
+        228,
+        278
+      ],
+      "center": [
+        848,
+        178
+      ],
+      "pixels": 20922,
+      "orientation": {
+        "imageRight": "right",
+        "imageUp": "front",
+        "facing": "up",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 12,
+      "name": "roof_rail_left",
+      "label": "左车顶侧梁",
+      "description": "Driver-side A-pillar and roof rail strip beside the glass roof",
+      "bbox": [
+        321,
+        139,
+        36,
+        492
+      ],
+      "center": [
+        334,
+        382
+      ],
+      "pixels": 10428,
+      "orientation": {
+        "imageRight": "right",
+        "imageUp": "front",
+        "facing": "up",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 13,
+      "name": "roof_rail_right",
+      "label": "右车顶侧梁",
+      "description": "Passenger-side A-pillar and roof rail strip beside the glass roof",
+      "bbox": [
+        667,
+        139,
+        36,
+        492
+      ],
+      "center": [
+        689,
+        382
+      ],
+      "pixels": 10464,
+      "orientation": {
+        "imageRight": "right",
+        "imageUp": "front",
+        "facing": "up",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 14,
+      "name": "quarter_panel_left",
+      "label": "左后翼子板",
+      "description": "Driver-side rear quarter panel, from rear door to taillight",
+      "bbox": [
+        104,
+        760,
+        160,
+        185
+      ],
+      "center": [
+        179,
+        857
+      ],
+      "pixels": 20393,
+      "orientation": {
+        "imageRight": "up",
+        "imageUp": "front",
+        "facing": "left",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 15,
+      "name": "quarter_panel_right",
+      "label": "右后翼子板",
+      "description": "Passenger-side rear quarter panel, from rear door to taillight",
+      "bbox": [
+        765,
+        760,
+        159,
+        185
+      ],
+      "center": [
+        849,
+        857
+      ],
+      "pixels": 20409,
+      "orientation": {
+        "imageRight": "down",
+        "imageUp": "front",
+        "facing": "right",
+        "mirrored": false
+      }
+    },
+    {
+      "index": 16,
+      "name": "bumper_rear",
+      "label": "后保险杠",
+      "description": "Rear bumper fascia",
+      "bbox": [
+        252,
+        888,
+        519,
+        128
+      ],
+      "center": [
+        511,
+        958
+      ],
+      "pixels": 29199,
+      "orientation": {
+        "imageRight": "right",
+        "imageUp": "up",
+        "facing": "rear",
+        "mirrored": false
+      }
+    }
+  ]
+}

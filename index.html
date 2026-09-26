@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tesla 车衣 3D 预览</title>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <header class="brand">
+          <h1>车衣 3D 预览</h1>
+          <p class="vehicle" id="vehicle-name"></p>
+        </header>
+
+        <section>
+          <h2>贴膜版本 <span class="hint">最多 4 个，并排对比</span></h2>
+          <label class="dropzone" id="dropzone">
+            <input type="file" id="file-input" accept="image/png" multiple hidden />
+            <strong>拖入或点击选择 PNG</strong>
+            <span>Tesla 模板尺寸 1024×1024，≤ 1 MB</span>
+          </label>
+          <select id="examples" hidden>
+            <option value="">加载 Tesla 官方示例…</option>
+          </select>
+          <ul class="versions" id="versions"></ul>
+        </section>
+
+        <section>
+          <h2>渲染</h2>
+          <div class="segmented" id="finish">
+            <button data-finish="gloss" class="active">亮面</button>
+            <button data-finish="satin">缎面</button>
+            <button data-finish="matte">哑光</button>
+          </div>
+          <label class="row">
+            <span>底漆颜色 <small>（透明像素处显示）</small></span>
+            <input type="color" id="base-color" value="#ffffff" />
+          </label>
+          <label class="row switch">
+            <span>显示面板轮廓与名称</span>
+            <input type="checkbox" id="debug-uv" />
+          </label>
+        </section>
+
+        <section>
+          <h2>视角</h2>
+          <div class="views" id="views"></div>
+        </section>
+
+        <section>
+          <button class="primary" id="screenshot">下载截图</button>
+        </section>
+      </aside>
+
+      <main class="stage" id="stage">
+        <canvas id="canvas"></canvas>
+        <div class="cells" id="cells"></div>
+        <div class="empty" id="empty">
+          <p>把车衣 PNG 拖到这里开始预览</p>
+          <small>拖动旋转 · 滚轮缩放 · 右键平移</small>
+        </div>
+        <div class="loading" id="loading">正在加载车模…</div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
